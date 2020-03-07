@@ -1,30 +1,47 @@
 <template>
   <div id="app">
-    <div id="nav">
-      HI,BEAUTYHOUSE.
+    <div class="backdrop_wrapper">
+      <div class="leftup_bottom" />
+      <div class="rightup_bottom" />
+      <div class="down_bottom" />
+      <div class="leftup_top">
+        <div class="logo">
+          <svg
+            class="icon"
+            aria-hidden="true"
+          >
+            <use xlink:href="#icon-shuye" />
+          </svg>
+          <div class="title">
+            BeautyHouse
+          </div>
+        </div>
+        <div class="slogan">
+          The best part of beauty
+          <br>is that which no picture can express.
+        </div>
+      </div>
+      <div class="rightup_top">
+        <NavMenu />
+      </div>
+      <div class="leftdown_top">
+        1
+      </div>
+      <div class="rightdown_top">
+        1
+      </div>
     </div>
   </div>
 </template>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import './assets/css/app.less';
+import NavMenu from './components/navmeau/NavMenu.vue';
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+export default {
+  name: 'App',
+  components: {
+    NavMenu,
+  },
+};
+</script>

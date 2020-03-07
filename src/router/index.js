@@ -4,11 +4,28 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 const routes = [
-  // {
-  //   path: '/',
-  //   name: 'Home',
-  //   component: Home,
-  // },
+  {
+    path: '/brand',
+    name: 'Brand',
+    component: () => import('../views/brand/Brand.vue'),
+  },
+  {
+    path: '/blogger',
+    name: 'Blogger',
+    component: () => import('../views/blogger/blogger.vue'),
+  }, {
+    path: '/ecommerce',
+    name: 'Ecommerce',
+    component: () => import('../views/ecommerce/Ecommerce.vue'),
+  }, {
+    path: '/favorite',
+    name: 'Favorite',
+    component: () => import('../views/favorite/Favorite.vue'),
+  }, {
+    path: '/tips',
+    name: 'Tips',
+    component: () => import('../views/tips/tips.vue'),
+  },
   // {
   //   path: '/about',
   //   name: 'About',
