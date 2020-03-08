@@ -8,13 +8,16 @@
     >
       {{ item.name }}
     </div>
-    <div class="collect">
+    <div
+      class="collect"
+    >
       收藏
     </div>
   </div>
 </template>
 
 <script>
+import { getCosmetic } from '../../assets/js/api';
 import './navmenu.less';
 
 export default {
@@ -23,13 +26,19 @@ export default {
   data() {
     return {
       list: [
-        { name: '品牌官网', id: 'brand' },
-        { name: '电商平台', id: 'e-commerce' },
-        { name: '单品好物', id: 'favorite' },
-        { name: '知名博主', id: 'blogger' },
-        { name: '护肤技巧', id: 'tips' },
       ],
     };
+  },
+  beforeCreate() {
+    getCosmetic.then((res) => {
+      const data = res && res.data.data;
+      this.list = [...data];
+    });
+  },
+  methods: {
+    linkTO(path) {
+      this.$router.push(path);
+    },
   },
 };
 </script>
