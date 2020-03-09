@@ -1,34 +1,39 @@
 <template>
   <div class="brand-wrapper">
-    <div
-      v-for="item in brandList"
-      :key="item.webname"
-    >
-      <Card :detail="item" />
+    <Slogan class="brand-slogn" />
+    <div class="brand-container">
+      <div class="brand-list">
+        <div
+          v-for="item in brandList"
+          :key="item.webname"
+        >
+          <Card :detail="item" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { getBrand } from '../../assets/js/api';
 import Card from '../../components/card/Card.vue';
+import Slogan from '../../components/slogan/Slogan.vue';
 import './brand.less';
+import cosmetic from '../../assets/js/data';
 
 export default {
   name: '',
   components: {
-    Card,
+    Card, Slogan,
   },
   data() {
     return {
-      brandList: [],
     };
   },
-  beforeCreate() {
-    getBrand.then((res) => {
-      const data = res && res.data.data;
-      this.brandList = [...data];
-    });
+  computed: {
+    brandList() {
+      const { data } = cosmetic;
+      return data.filter((ele) => ele.id === 'brand')[0].detail;
+    },
   },
 };
 </script>

@@ -43,7 +43,8 @@ module.exports = {
     'no-param-reassign': 'off',
 
     'no-plusplus': 'off',
-    'import/prefer-default-export': 'off'
+    'import/prefer-default-export': 'off',
+    "global-require": 0
   },
   parserOptions: {
     parser: 'babel-eslint',

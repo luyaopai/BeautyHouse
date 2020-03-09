@@ -5,38 +5,38 @@
       class="card-main"
     >
       <div class="title">
-        <!-- {{ detail.webname }} -->
+        {{ detail.webname }}
       </div>
-      <div class="logo">
+      <div class="brandlogo">
         <img
-          :src="detail.img"
+          :src="detail.imgname"
           alt=""
         >
       </div>
     </a>
-    <div class="card-bottom">
+    <!-- <div class="card-bottom">
       <div class="label-wrapper">
         <span>
           {{ detail.desc }}
         </span>
-        <!-- <span
+        <span
           v-for="item in detail.label"
           :key="item"
           class="label"
           :style="{background:randomcolor}"
         >
           {{ item }}
-        </span> -->
+        </span>
       </div>
-      <!-- <div class="collect">
+      <div class="collect">
         <svg
           class="icon"
           aria-hidden="true"
         >
           <use xlink:href="#icon-huabanfuben" />
         </svg>
-      </div> -->
-    </div>
+      </div>
+    </div> -->
   </div>
 </template>
 
@@ -58,11 +58,6 @@ export default {
     return {
 
     };
-  },
-  computed: {
-    randomcolor() {
-      return `#${Math.floor(Math.random() * 0x222222).toString(16)}`;
-    },
   },
 };
 </script>

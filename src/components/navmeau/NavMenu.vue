@@ -1,7 +1,7 @@
 <template>
   <div class="nav_wrapper">
     <div
-      v-for="item in list"
+      v-for="item in menu"
       :key="item.id"
       class="title"
       @click="linkTO(item.id)"
@@ -17,23 +17,24 @@
 </template>
 
 <script>
-import { getCosmetic } from '../../assets/js/api';
 import './navmenu.less';
 
 export default {
   name: 'NavMenu',
   components: {},
+  props: {
+    menu: {
+      type: Array,
+      default() {
+        return [];
+      },
+    },
+  },
   data() {
     return {
       list: [
       ],
     };
-  },
-  beforeCreate() {
-    getCosmetic.then((res) => {
-      const data = res && res.data.data;
-      this.list = [...data];
-    });
   },
   methods: {
     linkTO(path) {

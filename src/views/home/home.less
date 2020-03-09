@@ -1,46 +1,41 @@
 @import '../../assets/css/mixin.less';
 
 .home {
-.backdrop_wrapper{
+  width: 100%;
+  height: 100%;
+.backdrop-wrapper{
   position: relative;
-  .leftup_bottom {
-    .back_style(0px, 0px, 508px, 470px,#fff9ed)
-  }
-  .rightup_bottom {
-    .back_style(508px, 0px, 858px, 470px,#f2d6c2)
-  }
-  .down_bottom {
-    .back_style(0px, 470px, 1366px, 260px)
-  }
+  width: 100%;
+  height: 100%;
   .leftup_top {
-    .back_style(68px, 70px, 440px, 432px,#ffffff);
+    .back_style(0, 0, 33%, 77%,#ffffff);
+    z-index: -100;
     text-align: left;
-    .logo {
-      margin: 40px 100px;
-      font-size: 40px;
-      .icon {
-        margin-left: 12px;
-      }
-      .title {
-        margin-top: 4px;
-        font-size: 16px;
-        font-weight: 600;
-      }
-    }
     .slogan {
       margin:0 100px;
       font-size: 40px;
     }
   }
   .rightup_top {
-    .back_style(508px, 70px, 790px, 432px, #f2e0ce);
-    z-index: 100;
+    .back_style(33%, 0, 67%, 77%, #f2e0ce);
+    z-index: -100;
+    .nav {
+      position: absolute;
+      top: 28px;
+      left: -90px;
+    }
   }
   .leftdown_top {
-    .back_style(68px, 470px, 440px, 160px, #fff9ed)
+    .back_style(0, 77%, 33%, 23%, #fff9ed)
   }
   .rightdown_top {
-    .back_style(508px, 470px, 790px, 160px, #f2cac2)
+    z-index: -100;
+    .back_style(33%, 77%, 67%, 23%, #f2cac2)
+  }
+  .contain-wrapper {
+    padding-top: 10%;
+    width: 100%;
+    height: 85%;
   }
 }
 }

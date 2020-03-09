@@ -11,7 +11,6 @@
 
 <script>
 import Card from '../../components/card/Card.vue';
-import { getEcommerce } from '../../assets/js/api';
 import './ecommerce.less';
 
 export default {
@@ -25,10 +24,6 @@ export default {
     };
   },
   beforeCreate() {
-    getEcommerce.then((res) => {
-      const data = res && res.data.data;
-      this.list = [...data];
-    });
   },
 };
 </script>
