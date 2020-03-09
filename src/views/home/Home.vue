@@ -13,9 +13,7 @@
       <div class="leftdown_top">
         1
       </div>
-      <div class="rightdown_top">
-        1
-      </div>
+      <div class="rightdown_top" />
       <div class="contain-wrapper">
         <router-view />
       </div>

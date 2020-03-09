@@ -11,7 +11,7 @@
     <div
       class="collect"
     >
-      收藏
+      Favorite
     </div>
   </div>
 </template>
