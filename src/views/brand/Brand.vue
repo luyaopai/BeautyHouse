@@ -13,9 +13,8 @@
       <Pagination
         class="brand-page"
         :totalno="totalno"
-        :currentno="currentno"
+        :currentno.sync="currentno"
         @jumppage="jumppage"
-        @jumptoprev="jumptoprev"
         @jumptonext="jumptonext"
       />
     </div>
@@ -41,8 +40,9 @@ export default {
   },
   computed: {
     brandList() {
+      const param = this.$route.params.country;
       const { data } = cosmetic;
-      return data.filter((ele) => ele.id === 'brand')[0].detail;
+      return data.filter((ele) => ele.id === 'brand')[0].detail.filter((ele) => ele.countryid === param);
     },
     totalno() {
       const len = this.brandList.length;
@@ -57,7 +57,8 @@ export default {
       this.currentno = e;
     },
     jumptoprev(e) {
-      if (e === 1) {
+      console.log(e);
+      if (this.currentno === 1) {
         return false;
       }
       this.currentno -= 1;

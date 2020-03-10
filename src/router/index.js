@@ -5,14 +5,18 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/brand',
+    path: '/',
+    redirect: '/brand/recommend',
+  },
+  {
+    path: '/brand/:country',
     name: 'Brand',
     component: () => import('../views/brand/Brand.vue'),
   },
   {
     path: '/blogger',
     name: 'Blogger',
-    component: () => import('../views/blogger/blogger.vue'),
+    component: () => import('../views/blogger/Blogger.vue'),
   }, {
     path: '/ecommerce',
     name: 'Ecommerce',
@@ -24,7 +28,7 @@ const routes = [
   }, {
     path: '/tips',
     name: 'Tips',
-    component: () => import('../views/tips/tips.vue'),
+    component: () => import('../views/tips/Tips.vue'),
   },
   // {
   //   path: '/about',

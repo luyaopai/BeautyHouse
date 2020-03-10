@@ -66,10 +66,16 @@ export default {
       this.$emit('jumppage', page);
     },
     jumptoprev() {
-      this.$emit('jumptoprev', this.currentpage);
+      if (this.currentno === 1) {
+        return false;
+      }
+      this.$emit('update:currentno', this.currentno - 1);
     },
     jumptonext() {
-      this.$emit('jumptonext', this.currentpage);
+      if (this.currentno === this.totalno) {
+        return false;
+      }
+      this.$emit('jumptonext', this.currentno);
     },
   },
 };

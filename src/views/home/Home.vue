@@ -10,9 +10,7 @@
           class="nav"
         />
       </div>
-      <div class="leftdown_top">
-        1
-      </div>
+      <div class="leftdown_top" />
       <div class="rightdown_top" />
       <div class="contain-wrapper">
         <router-view />
@@ -41,8 +39,13 @@ export default {
   beforeMount() {
     const { data } = cosmetic;
     data.forEach((ele) => {
-      this.navList.push({ id: ele.id, name: ele.name });
+      this.navList.push({ id: ele.id, name: ele.name, type: ele.type });
     });
+  },
+  methods: {
+    // opentype(e) {
+
+    // },
   },
 };
 </script>

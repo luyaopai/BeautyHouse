@@ -5,15 +5,35 @@
   align-items: center;
   font-size: 15px;
   .title {
+    position: relative;
     margin: 0 40px;
     padding: 6px;
     font-weight: 700;
     color: #685b5b;
     cursor: pointer;
-    &.active {
-      color: #fff;
-      background-color: #000;
+    .navname{
+      padding: 6px;
+      &:hover {
+        border-bottom: 1px solid #fff;
+        color: #fff;
+      }
+      
     }
+    
+  .clicktype {
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 5px;
+    padding: 5px;
+    width: 70px;
+    background: #ffffff;
+    z-index: 100;
+    .typesingle {
+      margin: 10px 0;
+      cursor: pointer;
+    }
+  }
   }
   .collect {
     display: flex;
