@@ -1,0 +1,31 @@
+.pagine-wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  .prev {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  .next {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  .active {
+    color: #ccc;
+  }
+  .page-container {
+    display: flex;
+    color: #000;
+    .pager {
+      padding: 4px;
+      cursor: pointer;
+    }
+    .pageractive {
+      color: #fff;
+      background: #000;
+    }
+    .showactive {
+      display: none;
+    }
+  }
+}

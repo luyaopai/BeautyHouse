@@ -2,8 +2,24 @@ export default {
   data: [{
     name: '品牌官网',
     id: 'brand',
+    type: [
+      {
+        country: 'recommend',
+        countryname: '推荐品牌',
+      }, {
+        country: 'china',
+        countryname: '国货品牌',
+      }, {
+        country: 'america',
+        countryname: '欧美品牌',
+      }, {
+        country: 'japan',
+        countryname: '日韩品牌',
+      },
+    ],
     detail: [
       {
+        countryid: 'china',
         webname: '魅可',
         address: 'https://www.maccosmetics.com.cn',
         imgname: require('../image/web/mac.png'),
@@ -11,6 +27,7 @@ export default {
         desc: '人手一只的子弹头唇膏',
       },
       {
+        countryid: 'china',
         webname: '迪奥',
         address: 'https://www.dior.cn/zh_cn',
         imgname: require('../image/web/dior.jpg'),
@@ -18,6 +35,7 @@ export default {
         desc: '高质优雅品牌',
       },
       {
+        countryid: 'china',
         webname: 'pat',
         address: 'https://www.maccosmetics.com.cn',
         imgname: require('../image/web/pat.png'),
@@ -25,6 +43,7 @@ export default {
         desc: '时尚美妆品牌',
       },
       {
+        countryid: 'china',
         webname: '雅诗兰黛',
         address: 'https://www.dior.cn/zh_cn',
         imgname: require('../image/web/esteelauder.jpg'),
@@ -32,6 +51,7 @@ export default {
         desc: '美妆品牌No.1雅诗兰黛',
       },
       {
+        countryid: 'china',
         webname: '倩碧',
         address: 'https://www.dior.cn/zh_cn',
         imgname: require('../image/web/clinique.jpg'),
@@ -39,6 +59,7 @@ export default {
         desc: '经典护肤三步曲',
       },
       {
+        countryid: 'china',
         webname: 'colourpop',
         address: 'https://www.dior.cn/zh_cn',
         imgname: require('../image/web/colourpop.png'),
@@ -46,6 +67,7 @@ export default {
         desc: '美妆界网红品牌',
       },
       {
+        countryid: 'china',
         webname: '悦木之源',
         address: 'https://www.dior.cn/zh_cn',
         imgname: require('../image/web/origin.png'),
@@ -53,6 +75,7 @@ export default {
         desc: '菌菇的治愈力量',
       },
       {
+        countryid: 'china',
         webname: '海蓝之谜',
         address: 'https://www.dior.cn/zh_cn',
         imgname: require('../image/web/lamer.jpg'),
@@ -60,6 +83,7 @@ export default {
         desc: '贵妇护肤一把手',
       },
       {
+        countryid: 'china',
         webname: '芭比波朗',
         address: 'https://www.dior.cn/zh_cn',
         imgname: require('../image/web/bobbibrown.png'),
@@ -67,11 +91,83 @@ export default {
         desc: '裸妆大师',
       },
       {
+        countryid: 'china',
         webname: 'HABA',
         address: 'https://www.dior.cn/zh_cn',
         imgname: require('../image/web/haba.jpg'),
         label: ['999', '香水'],
         desc: '无添加化妆品牌',
+      }, {
+        countryid: 'china',
+        webname: 'ysl',
+        address: 'https://www.maccosmetics.com.cn',
+        imgname: require('../image/web/ysl.jpg'),
+        label: ['子弹头', 'chili'],
+        desc: '人手一只的子弹头唇膏',
+      },
+      {
+        countryid: 'china',
+        webname: '兰蔻',
+        address: 'https://www.dior.cn/zh_cn',
+        imgname: require('../image/web/lancome.jpg'),
+        label: ['999', '香水'],
+        desc: '高质优雅品牌',
+      },
+      {
+        countryid: 'china',
+        webname: '姬芮',
+        address: 'https://www.maccosmetics.com.cn',
+        imgname: require('../image/web/za.jpg'),
+        label: ['子弹头', 'chili'],
+        desc: '时尚美妆品牌',
+      },
+      {
+        countryid: 'china',
+        webname: '古驰',
+        address: 'https://www.dior.cn/zh_cn',
+        imgname: require('../image/web/gucci.jpg'),
+        label: ['999', '香水'],
+        desc: '美妆品牌No.1雅诗兰黛',
+      },
+      {
+        countryid: 'japan',
+        webname: '卡姿兰',
+        address: 'https://www.dior.cn/zh_cn',
+        imgname: require('../image/web/kazilan.jpg'),
+        label: ['999', '香水'],
+        desc: '经典护肤三步曲',
+      },
+      {
+        countryid: 'america',
+        webname: 'SK-II',
+        address: 'https://www.dior.cn/zh_cn',
+        imgname: require('../image/web/skii.jpg'),
+        label: ['999', '香水'],
+        desc: '高质优雅品牌',
+      },
+      {
+        countryid: 'china',
+        webname: '谜尚',
+        address: 'https://www.maccosmetics.com.cn',
+        imgname: require('../image/web/missha.jpg'),
+        label: ['子弹头', 'chili'],
+        desc: '时尚美妆品牌',
+      },
+      {
+        countryid: 'china',
+        webname: '美宝莲',
+        address: 'https://www.dior.cn/zh_cn',
+        imgname: require('../image/web/maybeline.jpg'),
+        label: ['999', '香水'],
+        desc: '美妆品牌No.1雅诗兰黛',
+      },
+      {
+        countryid: 'america',
+        webname: '馥蕾诗',
+        address: 'https://www.dior.cn/zh_cn',
+        imgname: require('../image/web/fresh.jpg'),
+        label: ['999', '香水'],
+        desc: '经典护肤三步曲',
       },
     ],
   }, {
