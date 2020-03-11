@@ -11,7 +11,14 @@
         />
       </div>
       <div class="leftdown_top" />
-      <div class="rightdown_top" />
+      <div class="rightdown_top">
+        <div class="bgimg">
+          <img
+            src="../../../public/hzb.png"
+            alt=""
+          >
+        </div>
+      </div>
       <div class="contain-wrapper">
         <router-view />
       </div>

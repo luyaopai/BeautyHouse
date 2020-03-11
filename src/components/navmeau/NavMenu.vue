@@ -9,7 +9,8 @@
     >
       <div
         class="navname"
-        @click="linkTO(item1.id,item1.type[0].country)"
+        :class="{active:isclicknav===index1,}"
+        @click="linkTO(item1.id,item1.type[0].country,index1)"
       >
         {{ item1.name }}
       </div>
@@ -22,7 +23,7 @@
           v-for="item2 in item1.type"
           :key="item2.country"
           class="typesingle"
-          @click="linkTO(item1.id,item2.country)"
+          @click="linkTO(item1.id,item2.country,index1)"
         >
           {{ item2.countryname }}
         </li>
@@ -55,12 +56,16 @@ export default {
       list: [],
       isclicktype: -1,
       hidelist: {},
+      isclicknav: 0,
     };
   },
+  computed: {
+  },
   methods: {
-    linkTO(path, type) {
+    linkTO(path, type, idx) {
       this.$router.push(`/${path}/${type}`);
       this.isclicktype = -1;
+      this.isclicknav = idx;
     },
     showType(idx) {
       if (this.hidelist) {

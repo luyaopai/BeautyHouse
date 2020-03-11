@@ -1,6 +1,5 @@
 <template>
   <div class="brand-wrapper">
-    <Slogan class="brand-slogn" />
     <div class="brand-container">
       <div class="brand-list">
         <div
@@ -22,11 +21,11 @@
 </template>
 
 <script>
-import Card from '../../components/card/Card.vue';
-import Slogan from '../../components/slogan/Slogan.vue';
+import Card from '../card/Card.vue';
+import Slogan from '../slogan/Slogan.vue';
 import './brand.less';
 import cosmetic from '../../assets/js/data';
-import Pagination from '../../components/pagination/Pagination.vue';
+import Pagination from '../pagination/Pagination.vue';
 
 export default {
   name: '',

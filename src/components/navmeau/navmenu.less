@@ -1,12 +1,11 @@
 .nav_wrapper {
   height: 100px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   font-size: 15px;
   .title {
     position: relative;
-    margin: 0 40px;
     padding: 6px;
     font-weight: 700;
     color: #685b5b;
@@ -14,12 +13,14 @@
     .navname{
       padding: 6px;
       &:hover {
-        border-bottom: 1px solid #fff;
-        color: #fff;
+        border-bottom: 1px solid #000;
       }
-      
     }
-    
+    .active {
+      border-bottom: 1px solid #fff;
+      background: #fff;
+      border: 1px solid #000;
+    }
   .clicktype {
     display: block;
     position: absolute;
