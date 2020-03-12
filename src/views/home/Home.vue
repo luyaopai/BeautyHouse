@@ -46,13 +46,8 @@ export default {
   beforeMount() {
     const { data } = cosmetic;
     data.forEach((ele) => {
-      this.navList.push({ id: ele.id, name: ele.name, type: ele.type });
+      this.navList.push({ id: ele.id, name: ele.name, children: ele.children });
     });
-  },
-  methods: {
-    // opentype(e) {
-
-    // },
   },
 };
 </script>

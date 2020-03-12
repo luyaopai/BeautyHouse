@@ -9,7 +9,7 @@
       class="card-main"
     >
       <div class="title">
-        {{ detail.webname }}
+        {{ detail.name }}
       </div>
       <div
         class="brandlogo"

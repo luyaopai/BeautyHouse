@@ -10,7 +10,7 @@
       <div
         class="navname"
         :class="{active:isclicknav===index1,}"
-        @click="linkTO(item1.id,item1.type[0].country,index1)"
+        @click="linkTO(item1.id,item1.children[0].id,index1)"
       >
         {{ item1.name }}
       </div>
@@ -20,12 +20,26 @@
         @mouseover="showType(index1)"
       >
         <li
-          v-for="item2 in item1.type"
-          :key="item2.country"
+          v-for="(item2,index2) in item1.children"
+          :key="item2.id"
           class="typesingle"
-          @click.stop="linkTO(item1.id,item2.country,index1)"
+          @click.stop="linkTO(item1.id,item2.id,index1)"
+          @mouseover="showtypeTwo(index2)"
+          @mouseout="hidetypeTwo"
         >
-          {{ item2.countryname }}
+          {{ item2.name }}
+          <div
+            v-if="item1.id==='favorite' && isclicktypetwo === index2"
+            class="clicktypetwosingle"
+          >
+            <div
+              v-for="item3 in item2.children"
+              :key="item3.id"
+              class="typetwosingle"
+            >
+              {{ item3.name }}
+            </div>
+          </div>
         </li>
       </ul>
     </div>
@@ -53,16 +67,15 @@ export default {
   },
   data() {
     return {
-      list: [],
       isclicktype: -1,
       hidelist: {},
       isclicknav: 0,
+      isclicktypetwo: -1,
     };
-  },
-  computed: {
   },
   methods: {
     linkTO(path, type, idx) {
+      console.log(path, type, idx);
       this.$router.push(`/${path}/${type}`);
       this.isclicktype = -1;
       this.isclicknav = idx;
@@ -76,7 +89,18 @@ export default {
     hideType() {
       this.hidelist = setTimeout(() => {
         this.isclicktype = -1;
-      }, 800);
+      }, 500);
+    },
+    showtypeTwo(idx) {
+      if (this.hideTwo) {
+        clearTimeout(this.hideTwo);
+      }
+      this.isclicktypetwo = idx;
+    },
+    hidetypeTwo() {
+      this.hideTwo = setTimeout(() => {
+        this.isclicktypetwo = -1;
+      }, 500);
     },
   },
 };

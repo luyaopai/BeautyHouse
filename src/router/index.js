@@ -6,7 +6,7 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    redirect: '/brand/recommend',
+    redirect: '/brand/china',
   },
   {
     path: '/brand/:country',
@@ -22,7 +22,7 @@ const routes = [
     name: 'Ecommerce',
     component: () => import('../views/ecommerce/Ecommerce.vue'),
   }, {
-    path: '/favorite',
+    path: '/favorite/:type',
     name: 'Favorite',
     component: () => import('../views/favorite/Favorite.vue'),
   }, {

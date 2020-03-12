@@ -5,7 +5,7 @@
       <div class="cardlist-list">
         <div
           v-for="item in showList"
-          :key="item.webname"
+          :key="item.id"
         >
           <Card :detail="item" />
         </div>
@@ -42,7 +42,9 @@ export default {
       const param = this.$route.params.country;
       const id = this.$route.path.match(/\w+/)[0];
       const { data } = cosmetic;
-      return data.filter((ele) => ele.id === id)[0].detail.filter((ele) => ele.countryid === param);
+      console.log(data);
+      const list = data.filter((ele) => ele.id === id)[0].children;
+      return list.filter((ele) => ele.id === param)[0].children;
     },
     totalno() {
       const len = this.cardlist.length;
