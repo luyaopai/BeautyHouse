@@ -18,7 +18,7 @@ const routes = [
     name: 'Blogger',
     component: () => import('../views/blogger/Blogger.vue'),
   }, {
-    path: '/ecommerce',
+    path: '/ecommerce/:country',
     name: 'Ecommerce',
     component: () => import('../views/ecommerce/Ecommerce.vue'),
   }, {

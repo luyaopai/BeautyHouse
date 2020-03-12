@@ -1,22 +1,17 @@
 <template>
-  <div class="ecommerce-wrapper">
-    <div
-      v-for="item in list"
-      :key="item.webname"
-    >
-      <Card :detail="item" />
-    </div>
+  <div>
+    <Cardlist />
   </div>
 </template>
 
 <script>
-import Card from '../../components/card/Card.vue';
+import Cardlist from '../../components/cardlist/Cardlist.vue';
 import './ecommerce.less';
 
 export default {
   name: '',
   components: {
-    Card,
+    Cardlist,
   },
   data() {
     return {

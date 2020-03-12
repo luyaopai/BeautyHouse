@@ -129,7 +129,7 @@ export default {
           address: 'https://www.dior.cn/zh_cn',
           imgname: require('../image/web/gucci.jpg'),
           label: ['999', '香水'],
-          desc: '美妆品牌No.1雅诗兰黛',
+          desc: '美妆品牌No.1雅诗兰黛xxxxxxxxxxxx',
         },
         {
           countryid: 'japan',

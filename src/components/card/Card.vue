@@ -1,5 +1,9 @@
 <template>
-  <div class="card-wrapper">
+  <div
+    class="card-wrapper"
+    @mouseenter="showLabel"
+    @mouseleave="hideLabel"
+  >
     <a
       :href="detail.address"
       class="card-main"
@@ -7,36 +11,21 @@
       <div class="title">
         {{ detail.webname }}
       </div>
-      <div class="brandlogo">
-        <img
-          :src="detail.imgname"
-          alt=""
-        >
-      </div>
+      <div
+        class="brandlogo"
+        :style="{backgroundImage: 'url('+detail.imgname+')'}"
+      />
     </a>
-    <!-- <div class="card-bottom">
-      <div class="label-wrapper">
-        <span>
+    <transition name="slide-fade">
+      <div
+        v-if="isshow"
+        class="card-bottom"
+      >
+        <span class="label-wrapper">
           {{ detail.desc }}
         </span>
-        <span
-          v-for="item in detail.label"
-          :key="item"
-          class="label"
-          :style="{background:randomcolor}"
-        >
-          {{ item }}
-        </span>
       </div>
-      <div class="collect">
-        <svg
-          class="icon"
-          aria-hidden="true"
-        >
-          <use xlink:href="#icon-huabanfuben" />
-        </svg>
-      </div>
-    </div> -->
+    </transition>
   </div>
 </template>
 
@@ -56,8 +45,16 @@ export default {
   },
   data() {
     return {
-
+      isshow: false,
     };
+  },
+  methods: {
+    showLabel() {
+      this.isshow = true;
+    },
+    hideLabel() {
+      this.isshow = false;
+    },
   },
 };
 </script>

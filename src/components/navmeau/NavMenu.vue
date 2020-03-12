@@ -23,7 +23,7 @@
           v-for="item2 in item1.type"
           :key="item2.country"
           class="typesingle"
-          @click="linkTO(item1.id,item2.country,index1)"
+          @click.stop="linkTO(item1.id,item2.country,index1)"
         >
           {{ item2.countryname }}
         </li>

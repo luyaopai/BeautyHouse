@@ -75,7 +75,7 @@ export default {
       if (this.currentno === this.totalno) {
         return false;
       }
-      this.$emit('jumptonext', this.currentno);
+      this.$emit('update:currentno', this.currentno + 1);
     },
   },
 };
