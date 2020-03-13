@@ -1,54 +1,90 @@
 <template>
   <div class="favorite-wrapper">
-    <div class="img-wrapper">
-      <div class="avatar" />
-      <div class="buybtn">
+    <div
+      v-if="product"
+      class="img-wrapper"
+    >
+      <div
+        class="avatar"
+        :style="{backgroundImage:'url('+product.avatar+')'}"
+      />
+      <a
+        :href="product.address"
+        class="buybtn"
+      >
         Buy it
-      </div>
+      </a>
     </div>
-    <div class="desc-wrapper">
+    <div
+      v-if="product"
+      class="desc-wrapper"
+    >
       <div class="text-wrapper">
         <div class="name">
-          小黑瓶
+          {{ product.name }}
         </div>
         <div class="symbol">
-          <span>
-            lancome
-          </span>
-          <span>
-            精华
+          <span
+            v-for="item in product.character"
+            :key="item"
+          >
+            {{ item }}
           </span>
         </div>
         <p class="desc">
-          升级版「小黑瓶」精华肌底液汲取生物技术成分。每一滴精华液蕴含的活性成分较之从前多出40% 此外，全新“小黑瓶”新增的两种复
+          简介：{{ product.desc }}
+        </p>
+        <p class="reason">
+          推荐理由：{{ product.reason }}
         </p>
       </div>
       <div class="pics-wrapper">
         <div
-          v-for="item in 5"
+          v-for="item in product.pics"
           :key="item"
           class="pics"
         >
           <img
-            src="../../../public/xhp0.jpg"
+            :src="item"
             alt=""
           >
         </div>
       </div>
     </div>
+    <div
+      v-if="!product"
+      class="fav-blank"
+    >
+      <Blank />
+    </div>
   </div>
 </template>
 
 <script>
+import Blank from '../../components/blank/Blank.vue';
 import './favorite.less';
+import datas from '../../assets/js/data';
 
 export default {
   name: '',
-  components: {},
+  components: {
+    Blank,
+  },
   data() {
     return {
 
     };
+  },
+  computed: {
+    product() {
+      const { type, category } = this.$route.params;
+      const { data } = datas;
+      const productlist = data.filter((ele) => ele.id === 'favorite')[0].children.filter((ele) => ele.id === type)[0].children;
+      if (category) {
+        return productlist.filter((ele) => ele.id === category)[0].children[0];
+      }
+      return productlist[0].children[0];
+    },
   },
 };
 </script>

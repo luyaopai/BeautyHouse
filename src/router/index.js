@@ -23,7 +23,7 @@ const routes = [
     component: () => import('../views/ecommerce/Ecommerce.vue'),
   }, {
     path: '/favorite/:type/:category',
-    name: 'Favorite',
+    name: 'Category',
     component: () => import('../views/favorite/Favorite.vue'),
   }, {
     path: '/favorite/:type',
