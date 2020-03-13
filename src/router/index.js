@@ -22,6 +22,10 @@ const routes = [
     name: 'Ecommerce',
     component: () => import('../views/ecommerce/Ecommerce.vue'),
   }, {
+    path: '/favorite/:type/:category',
+    name: 'Favorite',
+    component: () => import('../views/favorite/Favorite.vue'),
+  }, {
     path: '/favorite/:type',
     name: 'Favorite',
     component: () => import('../views/favorite/Favorite.vue'),

@@ -132,7 +132,7 @@ export default {
             {
               id: 'lancome',
               name: '兰蔻',
-              address: 'https://www.dior.cn/zh_cn',
+              address: 'https://www.lancome.com.cn',
               imgname: require('../image/web/lancome.jpg'),
               label: ['999', '香水'],
               desc: '高质优雅品牌',
@@ -337,8 +337,8 @@ export default {
                   name: '小黑瓶',
                   avatar: require('../image/web/xhp0.jpg'),
                   usage: '淡化黑眼圈，抹平眼部皱纹',
-                  address: 'https://jumei.com',
-                  desc: '大牌云集',
+                  address: 'https://www.lancome.com.cn/item/LAN00033?utm_source=baidu%5Fpc%5Fbw&utm_medium=cpc&utm_term=%E5%B0%8F%E9%BB%91%E7%93%B6&utm_campaign=E%5FLAN%5FBPSC%5F201804%5FGEN&utm_content=GEN',
+                  desc: '升级版「小黑瓶」精华肌底液汲取生物技术成分。每一滴精华液蕴含的活性成分较之从前多出40% 此外，全新“小黑瓶”新增的两种复合物——独特益生菌组合和龙根菌和酿酒酵母。其超强成分不仅能增强基因活动力、合成肌肤年轻蛋白、强化肌肤屏障，还能启动基因制造糖胺聚糖以及基底膜蛋白多糖，协助紧致肌肤、恢复弹力清除自由基，延缓老化，让肌肤焕发年轻神采。功效升级，10大年轻标志。经临床验证，使用「小黑瓶」7天后，肌肤便呈现年轻光彩。而8周后，肌肤则显著改善老化症状。只需一月，可修复并唤醒年轻肌肤，使肌肤变得更加柔软、细腻、弹润、透亮。可见：抚平细纹、平滑肌肤、透亮光采、净澈肌底、匀净肤色，见证年轻肌肤；可触：细腻肤质、弹润丰盈、柔软肌肤、紧致轮廓、提拉紧实，还原年轻质感',
                   pics: [
                     require('../image/web/xhp1.jpg'),
                     require('../image/web/xhp2.jpg'),

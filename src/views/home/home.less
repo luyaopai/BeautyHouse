@@ -8,21 +8,15 @@
   height: 100%;
   .leftup_top {
     .back_style(0, 0, 33%, 77%,#ffffff);
-    z-index: -100;
     text-align: left;
-    .slogan {
-      margin:0 100px;
-      font-size: 40px;
-    }
+    z-index: -100
   }
   .rightup_top {
     .back_style(33%, 0, 67%, 77%, #f2e0ce);
     background-image: url('../../../public/bg.png');
     background-position: 220px 260px;
     background-repeat: no-repeat;
-    .nav {
-      padding-top: 20px;
-    }
+    z-index: -100;
   }
   .leftdown_top {
     .back_style(0, 77%, 33%, 10%, #fff9ed);
@@ -30,6 +24,7 @@
   }
   .rightdown_top {
     .back_style(33%, 77%, 67%, 23%, #f2cac2);
+    z-index: -100;
     .bgimg {
           position: absolute;
           bottom: -120px;
@@ -44,9 +39,20 @@
     }
   }
   .contain-wrapper {
-    padding-top: 10%;
     width: 100%;
-    min-height: 500px;
+    min-height: 600px;
+    .home-top {
+      height: 140px;
+      display: flex;
+      .home-logo {
+        width: 10%;
+      }
+      .home-nav {
+        margin-left: 10%;
+        padding-top: 20px;
+        width: 80%;
+      }
+    }
   }
 }
 }

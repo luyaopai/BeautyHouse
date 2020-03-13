@@ -36,6 +36,7 @@
               v-for="item3 in item2.children"
               :key="item3.id"
               class="typetwosingle"
+              @click.stop="linkTO(item1.id,item2.id,index1,item3.id,)"
             >
               {{ item3.name }}
             </div>
@@ -74,9 +75,13 @@ export default {
     };
   },
   methods: {
-    linkTO(path, type, idx) {
-      console.log(path, type, idx);
-      this.$router.push(`/${path}/${type}`);
+    linkTO(path, type, idx, cate) {
+      if (path === 'favorite' && cate) {
+        this.$router.push(`/${path}/${type}/${cate}`);
+      } else {
+        this.$router.push(`/${path}/${type}`);
+      }
+      this.isclicktypetwo = -1;
       this.isclicktype = -1;
       this.isclicknav = idx;
     },

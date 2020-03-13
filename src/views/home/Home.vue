@@ -1,15 +1,8 @@
 <template>
   <div class="home">
     <div class="backdrop-wrapper">
-      <div class="leftup_top">
-        <Logo />
-      </div>
-      <div class="rightup_top">
-        <NavMenu
-          :menu="navList"
-          class="nav"
-        />
-      </div>
+      <div class="leftup_top" />
+      <div class="rightup_top" />
       <div class="leftdown_top" />
       <div class="rightdown_top">
         <div class="bgimg">
@@ -20,6 +13,13 @@
         </div>
       </div>
       <div class="contain-wrapper">
+        <div class="home-top">
+          <Logo class="home-logo" />
+          <NavMenu
+            :menu="navList"
+            class="home-nav"
+          />
+        </div>
         <router-view />
       </div>
     </div>
