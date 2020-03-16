@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import ElementUI from 'element-ui';
 import App from './App.vue';
 import router from './router';
 import store from './store';
@@ -6,6 +7,7 @@ import css from './assets/css/reset.css';
 import iconfont from './assets/js/iconfont';
 
 Vue.config.productionTip = false;
+Vue.use(ElementUI);
 
 new Vue({
   router,
