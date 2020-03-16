@@ -7,14 +7,14 @@
       @mouseover="showType(index1)"
       @mouseout="hideType"
     >
+      <div
+        class="navname"
+        :class="{active:isclicknav===index1,}"
+        @click="linkTO(item1.id,item1.children[0].id,index1)"
+      >
+        {{ item1.name }}
+      </div>
       <el-collapse-transition>
-        <div
-          class="navname"
-          :class="{active:isclicknav===index1,}"
-          @click="linkTO(item1.id,item1.children[0].id,index1)"
-        >
-          {{ item1.name }}
-        </div>
         <ul
           v-if="isclicktype===index1"
           class="clicktype"
