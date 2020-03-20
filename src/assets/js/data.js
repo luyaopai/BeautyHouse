@@ -40,6 +40,11 @@ export default {
               label: ['999', '香水'],
               desc: '时尚彩妆领导品牌',
             },
+          ],
+        }, {
+          id: 'america',
+          name: '欧美品牌',
+          children: [
             {
               id: 'lancome',
               name: '兰蔻',
@@ -48,11 +53,6 @@ export default {
               label: ['999', '香水'],
               desc: '高质优雅品牌',
             },
-          ],
-        }, {
-          id: 'america',
-          name: '欧美品牌',
-          children: [
             {
               id: 'bobbibrown',
               name: '芭比波朗',
@@ -482,47 +482,25 @@ export default {
         },
       ],
     }, {
-      name: '美妆博主',
+      name: '私藏博主',
       id: 'blogger',
-      detail: [
+      children: [
         {
-          name: 'kacoo',
-          field: '护肤',
-          avatar: 'http://kacoo.com',
-          links: [
-            {
-              platform: '微博',
-              address: 'http://kacoo.com',
-            }, {
-              platform: 'b站',
-              address: 'http://kacoo.com',
-            },
-          ],
-        }, {
-          name: 'kevin',
-          field: '美妆',
-          avatar: 'http://kevin.com',
-          links: [
-            {
-              platform: '微博',
-              address: 'http://kevin.com',
-            }, {
-              platform: 'b站',
-              address: 'http://kevin.com',
-            },
+          id: 'blogprotection',
+          name: '美妆护肤',
+          children: [
           ],
         },
       ],
     }, {
-      name: '护肤技巧',
+      name: '护肤贴士',
       id: 'tips',
-      detail: [
+      children: [
         {
-          desc: '关于卸妆不得不了解的小知识',
-          address: 'http://xiezhuang.com',
-        }, {
-          desc: '关于卸妆不得不了解的小知识',
-          address: 'http://xiezhuang.com',
+          id: 'tipsprotection',
+          name: '美妆护肤',
+          children: [
+          ],
         },
       ],
     }],

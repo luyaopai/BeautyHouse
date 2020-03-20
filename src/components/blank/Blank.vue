@@ -2,11 +2,8 @@
   <div
     class="blank-wrapper"
   >
-    <div class="lipstick" />
     <div class="blankmeg">
-      <p>Sorry,</p>
-      <p>暂无推荐。</p>
-
+      <p>页面正在加紧开发...</p>
       <div
         class="gohome"
         @click="gohome"

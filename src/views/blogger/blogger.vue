@@ -1,17 +1,31 @@
 <template>
   <div class="blogger_wrapper">
-    blogger
+    <div v-if="product">
+      <Blank />
+    </div>
   </div>
 </template>
 
 <script>
+import datas from '../../assets/js/data';
+import Blank from '../../components/blank/Blank.vue';
+
 export default {
   name: '',
-  components: {},
+  components: {
+    Blank,
+  },
   data() {
     return {
 
     };
+  },
+  computed: {
+    product() {
+      const { type } = this.$route.params;
+      const { data } = datas;
+      return data.filter((ele) => ele.id === 'blogger')[0].children.filter((ele) => ele.id === type)[0].children;
+    },
   },
 };
 </script>

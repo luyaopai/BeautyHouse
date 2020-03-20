@@ -38,6 +38,10 @@
           推荐理由：{{ product.reason }}
         </p>
       </div>
+      <div class="border-wrapper">
+        图片详情
+        <hr>
+      </div>
       <div class="pics-wrapper">
         <div
           v-for="item in product.pics"
