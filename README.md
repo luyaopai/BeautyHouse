@@ -20,3 +20,15 @@ npm run serve
 
 ### 运行界面
 
+![img](https://raw.githubusercontent.com/luyaopai/BeautyHouse/master/public/item1.jpg)
+
+![img](https://raw.githubusercontent.com/luyaopai/BeautyHouse/master/public/item6.jpg)
+
+![img](https://raw.githubusercontent.com/luyaopai/BeautyHouse/master/public/item5.jpg)
+
+![img](https://raw.githubusercontent.com/luyaopai/BeautyHouse/master/public/item2.jpg)
+
+![img](https://raw.githubusercontent.com/luyaopai/BeautyHouse/master/public/item4.jpg)
+
+![img](https://raw.githubusercontent.com/luyaopai/BeautyHouse/master/public/item3.jpg)
+
