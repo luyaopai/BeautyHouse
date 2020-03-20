@@ -1,29 +1,22 @@
-# beautyhouse
+## Beauty House
 
-## Project setup
-```
-yarn install
-```
+预览地址: 
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+### 运行项目
 
-### Compiles and minifies for production
+安装依赖
+
 ```
-yarn run build
+npm i
 ```
 
-### Run your tests
+运行项目
+
 ```
-yarn run test
+npm run serve
 ```
 
-### Lints and fixes files
-```
-yarn run lint
-```
+------
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 运行界面
+
