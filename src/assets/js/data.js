@@ -597,13 +597,14 @@ export default {
         },
       ],
     }, {
-      name: '护肤贴士',
+      name: '正品查询',
       id: 'tips',
       children: [
         {
           id: 'tipsprotection',
-          name: '美妆护肤',
+          name: '是否备案',
           children: [
+            { id: 'cotent' },
           ],
         },
       ],
