@@ -5,10 +5,6 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    redirect: '/brand/china',
-  },
-  {
     path: '/brand/:country',
     name: 'Brand',
     component: () => import('../views/brand/Brand.vue'),

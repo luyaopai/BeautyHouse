@@ -4,14 +4,7 @@
       <div class="leftup_top" />
       <div class="rightup_top" />
       <div class="leftdown_top" />
-      <div class="rightdown_top">
-        <div class="bgimg">
-          <img
-            src="../../../public/hzb.png"
-            alt=""
-          >
-        </div>
-      </div>
+      <div class="rightdown_top" />
       <div class="contain-wrapper">
         <div class="home-top">
           <Logo class="home-logo" />
@@ -20,7 +13,16 @@
             class="home-nav"
           />
         </div>
-        <router-view />
+        <div
+          v-if="home"
+        >
+          <Carousel
+            :imglist="imglist"
+          />
+        </div>
+        <div v-if="!home">
+          <router-view />
+        </div>
       </div>
     </div>
   </div>
@@ -30,18 +32,33 @@
 import './home.less';
 import NavMenu from '../../components/navmeau/NavMenu.vue';
 import Logo from '../../components/logo/Logo.vue';
+import Carousel from '../../components/carousel/Carousel.vue';
 import cosmetic from '../../assets/js/data';
 
 export default {
   name: 'Home',
   components: {
-    NavMenu, Logo,
+    NavMenu, Logo, Carousel,
   },
   data() {
     return {
       navList: [],
       brandList: [],
+      // home: true,
+      imglist: [
+        require('../../assets/image/web/lunbo0.png'),
+        require('../../assets/image/web/lunbo1.jpg'),
+        require('../../assets/image/web/lunbo3.jpg'),
+        require('../../assets/image/web/lunbo4.png'),
+        require('../../assets/image/web/lunbo5.jpg'),
+      ],
     };
+  },
+  computed: {
+    home() {
+      const { path } = this.$route;
+      return path === '/';
+    },
   },
   beforeMount() {
     const { data } = cosmetic;
