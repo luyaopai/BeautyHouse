@@ -5,7 +5,7 @@
       class="protect"
     >
       <div class="title">
-        如何查化妆品是否在药监局备案
+        查询化妆品是否在药监局备案
       </div>
       <hr>
       <p>

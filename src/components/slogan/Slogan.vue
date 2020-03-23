@@ -1,9 +1,11 @@
 <template>
   <div class="slogan">
     <div class="word">
-      The best part of beauty
-      <br>
-      is that which no pictue can express.
+      The best part
+      <br>of beauty
+      <br>is that which
+      <br> no pictue
+      <br>can express.
     </div>
     <div class="change">
       b-slogan

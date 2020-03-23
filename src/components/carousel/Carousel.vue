@@ -2,7 +2,7 @@
   <div class="carousel-wrapper">
     <el-carousel
       :interval="4000"
-      height="530px"
+      height="54rem"
     >
       <el-carousel-item
         v-for="item in imglist"

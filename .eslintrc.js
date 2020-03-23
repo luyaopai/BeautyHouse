@@ -44,7 +44,8 @@ module.exports = {
 
     'no-plusplus': 'off',
     'import/prefer-default-export': 'off',
-    "global-require": 0
+    "global-require": 0,
+    "max-len": "off"
   },
   parserOptions: {
     parser: 'babel-eslint',
