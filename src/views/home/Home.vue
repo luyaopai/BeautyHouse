@@ -44,7 +44,6 @@ export default {
     return {
       navList: [],
       brandList: [],
-      // home: true,
       imglist: [
         require('../../assets/image/web/lunbo0.jpg'),
         require('../../assets/image/web/lunbo1.jpg'),

@@ -12,7 +12,7 @@ const routes = [
   {
     path: '/blogger/:type',
     name: 'Blogger',
-    component: () => import('../views/blogger/Blogger.vue'),
+    component: () => import('../views/blogger/blogger.vue'),
   }, {
     path: '/ecommerce/:country',
     name: 'Ecommerce',
@@ -28,7 +28,7 @@ const routes = [
   }, {
     path: '/tips/:type',
     name: 'Tips',
-    component: () => import('../views/tips/Tips.vue'),
+    component: () => import('../views/tips/tips.vue'),
   },
 ];
 
