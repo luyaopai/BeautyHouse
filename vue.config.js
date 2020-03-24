@@ -2,7 +2,7 @@ module.exports = {
   devServer: {
     overlay: false,
   },
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/BeautyHouse/dist/'
-    : '/',
+  publicPath: process.env.NODE_ENV === 'development'
+    ? '/'
+    : '/BeautyHouse/dist/',
 };
