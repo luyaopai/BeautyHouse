@@ -1,6 +1,6 @@
 ## Beauty House
 
-预览地址: https://luyaopai.github.io/BeautyHouse/dist/index.html
+预览地址: [BeautyHouse](https://luyaopai.github.io/BeautyHouse/dist/index.html)
 
 ### 运行项目
 
