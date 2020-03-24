@@ -46,11 +46,9 @@ export default {
       brandList: [],
       // home: true,
       imglist: [
-        require('../../assets/image/web/lunbo0.png'),
+        require('../../assets/image/web/lunbo0.jpg'),
         require('../../assets/image/web/lunbo1.jpg'),
-        require('../../assets/image/web/lunbo3.jpg'),
-        require('../../assets/image/web/lunbo4.png'),
-        require('../../assets/image/web/lunbo5.jpg'),
+        require('../../assets/image/web/lunbo2.png'),
       ],
     };
   },
