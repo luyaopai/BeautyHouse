@@ -83,6 +83,7 @@ export default {
     product() {
       const { type, category } = this.$route.params;
       const { data } = datas;
+      Object.freeze(data);
       const productlist = data.filter((ele) => ele.id === 'favorite')[0].children.filter((ele) => ele.id === type)[0].children;
       if (category) {
         return productlist.filter((ele) => ele.id === category)[0].children[0];

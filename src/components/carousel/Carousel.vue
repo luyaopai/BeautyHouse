@@ -26,7 +26,9 @@ import './carousel.less';
 
 export default {
   name: '',
-  components: {},
+  components: {
+
+  },
   props: {
     imglist: {
       type: Array,

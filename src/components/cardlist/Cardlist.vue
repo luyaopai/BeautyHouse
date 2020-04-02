@@ -42,6 +42,7 @@ export default {
       const param = this.$route.params.country;
       const id = this.$route.path.match(/\w+/)[0];
       const { data } = cosmetic;
+      Object.freeze(data);
       const list = data.filter((ele) => ele.id === id)[0].children;
       return list.filter((ele) => ele.id === param)[0].children;
     },
