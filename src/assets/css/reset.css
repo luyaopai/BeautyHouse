@@ -46,6 +46,11 @@
     @media screen and (max-width: 1400px) {
     html{font-size: 10px;}
     }
+    @media screen and (max-width: 1200px) {
+    html{
+        width:1200px !important;
+    }
+    }
  
  blockquote, q {
      quotes: none;
